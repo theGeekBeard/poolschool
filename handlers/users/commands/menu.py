@@ -21,5 +21,6 @@ async def show_menu(message: types.Message):
         markup.add(InlineKeyboardButton("Акции", callback_data="stock"))
     if message.chat.id == 610626273 or message.chat.id == 5294530966:
         markup.row(InlineKeyboardButton("Изменить блок 'Акции'", callback_data="change_stock"))
+        markup.row(InlineKeyboardButton("Статистика", callback_data="statistic"))
 
     await message.answer("Главное меню:", reply_markup=markup)

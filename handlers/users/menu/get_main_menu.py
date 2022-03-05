@@ -20,5 +20,6 @@ async def get_main_menu(call: CallbackQuery):
         markup.row(InlineKeyboardButton("Акции", callback_data="stock"))
     if call.message.chat.id == 610626273 or call.message.chat.id == 5294530966:
         markup.row(InlineKeyboardButton("Изменить блок 'Акции'", callback_data="change_stock"))
+        markup.row(InlineKeyboardButton("Статистика", callback_data="statistic"))
 
     await call.message.edit_text("Главное меню", reply_markup=markup)
